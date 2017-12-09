@@ -116,6 +116,7 @@ Then we apply the `mice` and `complete` functions from the `mice` package. Final
 ```{r impute na}
 df_6 <- complete(mice(df_6)) %>% 
   mutate(date = as_date(date, origin = lubridate::origin))
+head(df_6)
 ```
 
 ##### 7) Histogram of the total number of steps taken each day after missing 
@@ -127,7 +128,7 @@ df_7 <- df_6 %>%
 head(df_7)
 ```
 
-```{r imputed steps hist}
+```{r imputed_steps_hist}
 df_7_plot <- ggplot(df_7, aes(total_steps)) + 
   geom_histogram(binwidth = 2500, boundary = 0, colour = 'black', fill = 'white') +
   labs(title = 'Histogram of Total Steps', x = 'Daily Steps', y = 'Frequency') + 
@@ -151,7 +152,7 @@ head(df_8)
 ```
 
 We then create the plot with `ggplot`. We can facet the weekday and weekend with `facet_grid`. Placing the `day` variable on the left of the tilde (~) plots the two on top of each other. Placing the `day` variable on the right of the tilde plots the two side by side.
-```{r plot avg steps}
+```{r plot_avg_steps}
 df_8_plot <- ggplot(df_8, aes(interval, average_steps)) +
   geom_line() + 
   facet_grid(day ~ .) +
@@ -160,7 +161,7 @@ df_8_plot
 ```
 
 ##### 9) All of the R code needed to reproduce the results (numbers, plots, etc.) in the report1
-```{r all code}
+```{r all_code}
 # load tidyverse and readr packages
 if(!require(tidyverse)) {install.packages('tidyverse'); require(tidyverse)}
 if(!require(lubridate)) {install.packages('lubridate'); require(lubridate)}

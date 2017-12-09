@@ -231,6 +231,20 @@ df_6 <- complete(mice(df_6)) %>%
 ##   5   5  steps
 ```
 
+```r
+head(df_6)
+```
+
+```
+##   steps       date interval
+## 1     0 2012-10-01        0
+## 2     0 2012-10-01        5
+## 3     0 2012-10-01       10
+## 4     0 2012-10-01       15
+## 5     0 2012-10-01       20
+## 6     0 2012-10-01       25
+```
+
 ##### 7) Histogram of the total number of steps taken each day after missing 
 First we'll create a data.frame that has the added steps for each day.
 
@@ -245,7 +259,7 @@ head(df_7)
 ## # A tibble: 6 x 2
 ##         date total_steps
 ##       <date>       <dbl>
-## 1 2012-10-01        9753
+## 1 2012-10-01       14339
 ## 2 2012-10-02         126
 ## 3 2012-10-03       11352
 ## 4 2012-10-04       12116
@@ -263,7 +277,7 @@ df_7_plot <- ggplot(df_7, aes(total_steps)) +
 df_7_plot  
 ```
 
-![](PA1_template_files/figure-html/imputed steps hist-1.png)<!-- -->
+![](PA1_template_files/figure-html/imputed_steps_hist-1.png)<!-- -->
 
 
 ##### 8) Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends
@@ -303,7 +317,7 @@ df_8_plot <- ggplot(df_8, aes(interval, average_steps)) +
 df_8_plot
 ```
 
-![](PA1_template_files/figure-html/plot avg steps-1.png)<!-- -->
+![](PA1_template_files/figure-html/plot_avg_steps-1.png)<!-- -->
 
 ##### 9) All of the R code needed to reproduce the results (numbers, plots, etc.) in the report1
 
@@ -381,7 +395,7 @@ df_2_plot
 ## Warning: Removed 8 rows containing non-finite values (stat_bin).
 ```
 
-![](PA1_template_files/figure-html/all code-1.png)<!-- -->
+![](PA1_template_files/figure-html/all_code-1.png)<!-- -->
 
 ```r
 # 3) Mean and median number of steps taken each day
@@ -419,7 +433,7 @@ df_4_plot
 ## Warning: Removed 2 rows containing missing values (geom_path).
 ```
 
-![](PA1_template_files/figure-html/all code-2.png)<!-- -->
+![](PA1_template_files/figure-html/all_code-2.png)<!-- -->
 
 ```r
 # 5) The 5-minute interval that, on average, contains the maximum number of steps
@@ -498,7 +512,7 @@ df_7_plot <- ggplot(df_7, aes(total_steps)) +
 df_7_plot  
 ```
 
-![](PA1_template_files/figure-html/all code-3.png)<!-- -->
+![](PA1_template_files/figure-html/all_code-3.png)<!-- -->
 
 ```r
 # 8) Panel plot comparing the average number of steps taken per 5-minute 
@@ -520,4 +534,4 @@ df_8_plot <- ggplot(df_8, aes(interval, average_steps)) +
 df_8_plot
 ```
 
-![](PA1_template_files/figure-html/all code-4.png)<!-- -->
+![](PA1_template_files/figure-html/all_code-4.png)<!-- -->
