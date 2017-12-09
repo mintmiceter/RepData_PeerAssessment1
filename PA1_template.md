@@ -12,7 +12,7 @@ output:
 This is an R Markdown document for the Reproducible Research Project 1. This markdown reads the activity.csv file and performs some exploratory analysis.
 
 
-The libraries used for this project: `tidyverse` and `mice`. `tidyverse` contains many of the packages we need like `dplyr`, `ggplot2`, `lubridate` and `readr`.
+The libraries used for this project: `tidyverse`, `lubridate` and `mice`. `tidyverse` contains many of the packages we need like `dplyr`, `ggplot2` and `readr`.
 
 ```r
 if(!require(tidyverse)) {install.packages('tidyverse'); require(tidyverse)}
@@ -166,7 +166,7 @@ df_4_plot <- ggplot(df_3, aes(date, mean_steps)) +
 df_4_plot
 ```
 
-![](PA1_template_files/figure-html/average steps-1.png)<!-- -->
+![](PA1_template_files/figure-html/averagesteps-1.png)<!-- -->
 
 ##### 5) The 5-minute interval that, on average, contains the maximum number of steps
 
@@ -245,7 +245,7 @@ head(df_7)
 ## # A tibble: 6 x 2
 ##         date total_steps
 ##       <date>       <dbl>
-## 1 2012-10-01        8076
+## 1 2012-10-01       12148
 ## 2 2012-10-02         126
 ## 3 2012-10-03       11352
 ## 4 2012-10-04       12116

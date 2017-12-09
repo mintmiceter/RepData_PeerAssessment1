@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 This is an R Markdown document for the Reproducible Research Project 1. This markdown reads the activity.csv file and performs some exploratory analysis.
 
 
-The libraries used for this project: `tidyverse` and `mice`. `tidyverse` contains many of the packages we need like `dplyr`, `ggplot2`, `lubridate` and `readr`.
+The libraries used for this project: `tidyverse`, `lubridate` and `mice`. `tidyverse` contains many of the packages we need like `dplyr`, `ggplot2` and `readr`.
 ```{r library, message=FALSE, warning=FALSE}
 if(!require(tidyverse)) {install.packages('tidyverse'); require(tidyverse)}
 if(!require(lubridate)) {install.packages('lubridate'); require(lubridate)}
@@ -85,7 +85,7 @@ head(df_3)
 ##### 4) Time series plot of the average number of steps taken
 
 We use the mean and median on the data.frame from #3. `geom_line` from `ggplot` is called for this plot.
-```{r average steps, warning=FALSE}
+```{r averagesteps, warning=FALSE}
 df_4_plot <- ggplot(df_3, aes(date, mean_steps)) + 
   geom_line() +
   labs(title = 'Average Number of Steps Taken Per Day', 
