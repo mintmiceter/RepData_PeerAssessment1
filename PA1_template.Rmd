@@ -85,7 +85,7 @@ head(df_3)
 ##### 4) Time series plot of the average number of steps taken
 
 We use the mean and median on the data.frame from #3. `geom_line` from `ggplot` is called for this plot.
-```{r averagesteps, warning=FALSE}
+```{r average_steps, warning=FALSE}
 df_4_plot <- ggplot(df_3, aes(date, mean_steps)) + 
   geom_line() +
   labs(title = 'Average Number of Steps Taken Per Day', 

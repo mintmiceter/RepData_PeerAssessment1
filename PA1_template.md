@@ -166,7 +166,7 @@ df_4_plot <- ggplot(df_3, aes(date, mean_steps)) +
 df_4_plot
 ```
 
-![](PA1_template_files/figure-html/averagesteps-1.png)<!-- -->
+![](PA1_template_files/figure-html/average_steps-1.png)<!-- -->
 
 ##### 5) The 5-minute interval that, on average, contains the maximum number of steps
 
@@ -245,7 +245,7 @@ head(df_7)
 ## # A tibble: 6 x 2
 ##         date total_steps
 ##       <date>       <dbl>
-## 1 2012-10-01       12148
+## 1 2012-10-01        9753
 ## 2 2012-10-02         126
 ## 3 2012-10-03       11352
 ## 4 2012-10-04       12116
