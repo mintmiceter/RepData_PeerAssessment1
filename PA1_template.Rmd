@@ -17,6 +17,7 @@ This is an R Markdown document for the Reproducible Research Project 1. This mar
 The libraries used for this project: `tidyverse` and `mice`. `tidyverse` contains many of the packages we need like `dplyr`, `ggplot2`, `lubridate` and `readr`.
 ```{r library, message=FALSE, warning=FALSE}
 if(!require(tidyverse)) {install.packages('tidyverse'); require(tidyverse)}
+if(!require(lubridate)) {install.packages('lubridate'); require(lubridate)}
 if(!require(mice)) {install.packages('mice'); require(mice)}
 ```
 
@@ -163,7 +164,6 @@ df_8_plot
 # load tidyverse and readr packages
 if(!require(tidyverse)) {install.packages('tidyverse'); require(tidyverse)}
 if(!require(lubridate)) {install.packages('lubridate'); require(lubridate)}
-if(!require(readr)) {install.packages('readr'); require(readr)}
 if(!require(mice)) {install.packages('mice'); require(mice)}
 
 # set working directory

@@ -12,12 +12,11 @@ output:
 This is an R Markdown document for the Reproducible Research Project 1. This markdown reads the activity.csv file and performs some exploratory analysis.
 
 
-The libraries used for this project: tidyverse, lubridate, readr and mice
+The libraries used for this project: `tidyverse` and `mice`. `tidyverse` contains many of the packages we need like `dplyr`, `ggplot2`, `lubridate` and `readr`.
 
 ```r
 if(!require(tidyverse)) {install.packages('tidyverse'); require(tidyverse)}
 if(!require(lubridate)) {install.packages('lubridate'); require(lubridate)}
-if(!require(readr)) {install.packages('readr'); require(readr)}
 if(!require(mice)) {install.packages('mice'); require(mice)}
 ```
 
@@ -246,7 +245,7 @@ head(df_7)
 ## # A tibble: 6 x 2
 ##         date total_steps
 ##       <date>       <dbl>
-## 1 2012-10-01       11836
+## 1 2012-10-01        8076
 ## 2 2012-10-02         126
 ## 3 2012-10-03       11352
 ## 4 2012-10-04       12116
@@ -312,7 +311,6 @@ df_8_plot
 # load tidyverse and readr packages
 if(!require(tidyverse)) {install.packages('tidyverse'); require(tidyverse)}
 if(!require(lubridate)) {install.packages('lubridate'); require(lubridate)}
-if(!require(readr)) {install.packages('readr'); require(readr)}
 if(!require(mice)) {install.packages('mice'); require(mice)}
 
 # set working directory
